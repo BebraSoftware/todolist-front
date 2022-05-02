@@ -10,6 +10,7 @@ logs
 **/*.back.*
 
 bower_components
+package-lock.json
 
 *.sublime*
 
