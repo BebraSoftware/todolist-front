@@ -17,14 +17,12 @@ const TodoItem = (props) => {
     }
 
     return (
-        <li className="collection-item" key={props.item.id}>{props.item.content}
-            <span
-                onClick={() => {
-                removeTodoItem(props.item.id)
-            }}
-                className="secondary-content">
-                <i className="remove-btn material-icons blue-text">clear</i>
-            </span>
+
+        <li className="collection-item animate__animated animate__fadeInDown" key={props.item.id}>
+            <span className="star_off"></span>
+            <span className="task_name">{props.item.content}</span>
+            <span onClick={() => {removeTodoItem(props.item.id)}} className="secondary-content biner"> </span>
+
         </li>
     );
 }

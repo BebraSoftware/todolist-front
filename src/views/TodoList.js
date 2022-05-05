@@ -46,33 +46,52 @@ const TodoList = () => {
    
   }
 
-    return (    
+    return (
         <section id="section-todo">
-        <h3 className="center-align white-text blue">Todo List</h3>
+
+        <span className="menu animate__animated animate__fadeInLeft">
+            <span className="menu_inner">
+                <span className="profile">
+                    <span className="profile_pic"><img  className="avatar" src="bang.jpg" alt=""/></span>
+                    <span className="profile_name text"><p>NAME</p></span>
+                    <span className="profile_lastname text"><p>LASTNAME</p></span>
+                    <span className="profile_line"></span>
+                    <span className="profile_sex">MALE</span>
+                </span>
+
+                <span className="quit">
+                    <span className="quit_inner">
+                        <span className="quit_butt">QUIT</span>
+                    </span>
+                </span>
+            </span>
+        </span>
         {
             todoList.length>0?
-            (<ul className="collection">
+            (<ul className="collection animate__animated animate__fadeInDown">
             {
               todoList.map(item => {
-                return <TodoItem key={item.id} item={item} />
+                return  <TodoItem key={item.id} item={item} />
               })
             }
           </ul>):
-          (<p className="center-align">You don't have anything to do! Awesome!</p>)
+          (<p className="nothing animate__animated animate__fadeInDown">You don't have anything to do! Awesome!</p>)
         }
-       
-        <div className="row">
-        <p className="red-text err-msg col s12 center-align">
+
+        <p className="input_smth">
         {errMsg}
         </p>
-        <div className="input-field col s10">
-        <input onChange={handleInput} value={inputTodo} placeholder="Add todo..." id="todo-input" type="text" />
-        <label htmlFor="todo-input" className="active">New Todo</label>
-        </div>
-      
-        <button className="btn col s2 blue" onClick={addNewTodo} >Add</button>
+        <div className="row animate__animated animate__fadeInUp">
+            <div className="new_task_name">
+            <input onChange={handleInput} value={inputTodo} className="new_task_input" placeholder="New Task" id="todo-input" type="text" />
+            </div>
+            <div className="task_plus" onClick={addNewTodo} ></div>
         </div>
       </section>
+
+
+
+
       );
 }
  
