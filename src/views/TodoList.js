@@ -17,7 +17,7 @@ const TodoList = () => {
   const [inputTodo,setInputTodo] =  useState('');
   //Local state for the input error message
   const [errMsg,setErrMsg] = useState('');
-
+  
   //Handle onChange event
   const handleInput = (e)=>{
     setInputTodo(e.target.value);
@@ -40,7 +40,7 @@ const TodoList = () => {
     }
     else{
         //Display Error message
-        setErrMsg('Please input something...');
+        setErrMsg('');
     }
 
    
