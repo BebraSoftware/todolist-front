@@ -28,7 +28,6 @@ const TodoItem = (props) => {
         //filter to get the todoId which need to be remove
         let newTodoList = todoList.filter(item => item.id !== todoId);
         dispatch({type: 'REMOVE_TODO', payload: newTodoList})
-
     }
 
     return (
