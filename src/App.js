@@ -5,16 +5,16 @@ function App() {
 
     return (
         
-
-        <div className="App">
+        
+        <span className="App">
             <main className="container">
 
-                <div className="divider"></div>
+                <span className="spanider"></span>
 
-                {/* Please check /views/TodoList.js for detail*/}
                 <TodoList/>
             </main>
-        </div>
+        </span >
+        
     );
 }
 

@@ -2,9 +2,7 @@ import React,{useState} from 'react';
 import { useSelector,useDispatch } from 'react-redux';
 import TodoItem from '../components/TodoItem';
 
-
 const TodoList = () => {
-
   //#2 Used to get a single attribute or object inside the Reducer
 
   //Get todoList from todoReducer
@@ -22,6 +20,28 @@ const TodoList = () => {
   const handleInput = (e)=>{
     setInputTodo(e.target.value);
   }
+  // eslint-disable-next-line
+  const url = 'https://localhost:5001/api/Task';
+  const data = {
+      "username":"Dimas",
+      "taskname":"Srat",
+      "iscompleted":false,
+      "isimportant":true
+  };
+
+   function addItem() {
+
+       fetch('https://localhost:5001/api/Task', {
+           method: 'post',
+           mode: 'no-cors',
+           headers: {
+               'Accept': 'application/json, text/plain, */*',
+               'Content-Type': 'application/json'
+           },
+           body: JSON.stringify(data)
+       }).then(res => res.json())
+           .then(res => console.log(res));
+   }
 
   //Handle onClick event
   const addNewTodo = ()=>{
@@ -37,13 +57,15 @@ const TodoList = () => {
         dispatch({type:'ADD_TODO',payload:newTodoObject});
         //Empty input 
         setInputTodo('');
+        console.log(data);
+        addItem();
     }
     else{
         //Display Error message
         setErrMsg('');
     }
 
-   
+
   }
 
     return (
@@ -60,8 +82,8 @@ const TodoList = () => {
                 </span>
 
                 <span className="quit">
-                    <span className="quit_inner">
-                        <span className="quit_butt">QUIT</span>
+                        <span className="quit_inner">
+                            <a className="quit_butt" href="login.html">QUIT</a>
                     </span>
                 </span>
             </span>
@@ -88,10 +110,6 @@ const TodoList = () => {
             <div className="task_plus" onClick={addNewTodo} ></div>
         </div>
       </section>
-
-
-
-
       );
 }
  

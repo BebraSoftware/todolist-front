@@ -373,3 +373,249 @@ body::-webkit-scrollbar-thumb {
   background-color: rgba(255, 113, 113, 1);
   cursor: pointer;
 }
+.quit_butt {
+    color: white;
+    text-decoration: none;
+}
+
+.quit_visited {
+    color: white;
+}
+
+/*              LIZAAAAAAAAA            */
+
+.container {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    max-height: 1080px;
+    max-width: 1920px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.right_side {
+    width: 50%;
+    background: url('../img/list.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+    .right_side img {
+        width: 100%;
+    }
+
+.left_side {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background: #FBFDFE;
+}
+
+.connection {
+    position: relative;
+    top: 17%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex: 1;
+}
+
+    .connection h1 {
+        font-weight: 400;
+        font-size: 46px;
+        line-height: 56px;
+        color: #000000;
+        margin-bottom: 20px;
+    }
+
+.next {
+    flex: none;
+    position: relative;
+    bottom: 40px;
+    right: 40px;
+}
+
+    .next a {
+        bottom: -40px;
+        float: right;
+    }
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 20px 0;
+}
+
+    .form input {
+        width: 400px;
+        height: 80px;
+        background: #FFFFFF;
+        border: 3px solid rgba(70, 82, 157, 0.4);
+        border-radius: 30px;
+        font-weight: 300;
+        font-size: 20px;
+        font-family: "Montserrat";
+        color: #000000;
+        opacity: 0.6;
+        text-indent: 20px;
+        text-align: left;
+    }
+
+.inpt {
+    margin-bottom: 30px;
+}
+
+.error {
+    color: red;
+    font-size: 16px;
+    visibility: hidden;
+}
+
+.reg_login {
+    margin-bottom: 7px;
+}
+
+.password {
+    margin-bottom: 25px;
+}
+
+.password_confirm {
+    margin-bottom: 7px;
+}
+
+.login_error {
+    visibility: hidden;
+    color: red;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+.password_error {
+    visibility: hidden;
+    color: red;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+.connection a {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 23px;
+    text-decoration-line: underline;
+    color: #46529D;
+    text-align: left;
+}
+
+    .connection a:hover {
+        color: #46529D;
+    }
+
+    .connection a:visited {
+        color: #46529D;
+    }
+
+
+@media only screen and (min-width: 992px) and (max-width:1424px) {
+    .connection h1 {
+        font-size: 36px;
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width:991px) {
+    .connection h1 {
+        font-size: 30px;
+    }
+
+    .form input {
+        width: 330px;
+        font-size: 19px;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width:766px) {
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .next {
+        flex: none;
+    }
+
+        .next a {
+            padding: 21px;
+            float: right;
+        }
+
+    .left_side {
+        width: 100%;
+    }
+
+    .right_side {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .next {
+        flex: none;
+    }
+
+        .next a {
+            padding: 21px;
+            float: right;
+        }
+
+    .left_side {
+        width: 100%;
+    }
+
+    .right_side {
+        display: none;
+    }
+
+    .connection h1 {
+        font-size: 30px;
+    }
+
+    .form {
+        width: 90%;
+    }
+
+        .form input {
+            width: 100%;
+            font-size: 20px;
+        }
+}
+
+@keyframes preloader-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes preloader-bounce {
+
+    0%, 100% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
