@@ -1,0 +1,294 @@
+body {
+    font-family: 'Inter';
+    font-style: normal;
+    overflow: hidden;
+}
+
+
+.container {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    max-height: 1080px;
+    max-width: 1920px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 46px;
+    line-height: 56px;
+    color: #000000;
+}
+
+.right_side {
+    width: 50%;
+    background: url('../img/image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.right_side img {
+    width: 100%;
+}
+
+.left_side {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background: #FBFDFE;
+}
+
+.cnt {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex: 1;
+}
+
+.cnt h1 {
+    font-weight: 400;
+    font-size: 46px;
+    line-height: 56px;
+    color: #000000;
+    padding: 0;
+    margin: 0;
+}
+
+.btr {
+    flex: none;
+    position: relative;
+    bottom: 40px;
+    right: 40px;
+}
+
+.btr a {
+    bottom: -40px;
+    float: right;
+}
+
+.form {
+    padding: 5px 0 48px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form input {
+    width: 400px;
+    height: 80px;
+    background: #FFFFFF;
+    border: 3px solid rgba(70, 82, 157, 0.4);
+    border-radius: 30px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    opacity: 0.6;
+    text-indent: 37px;
+    text-align: left;
+}
+
+.h37 {
+    height: 37px;
+}
+
+.error {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FF0000;
+    text-indent: 37px;
+    margin: 5px 0 0 0;
+}
+
+.inpt {
+    margin-bottom: 37px;
+}
+
+.cnt a {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 23px;
+    text-decoration-line: underline;
+    color: #46529D;
+    text-align: left;
+}
+
+.cnt a:hover {
+    color: #46529D;
+}
+
+.cnt a:visited {
+    color: #46529D;
+}
+
+.mb37 {
+    margin-bottom: 37px;
+}
+
+h1.mb48 {
+    margin-bottom: 48px;
+}
+
+@media only screen and (min-width: 992px) and (max-width:1424px) {
+    .cnt h1 {
+        font-size: 36px;
+    }
+
+}
+
+@media only screen and (min-width: 767px) and (max-width:991px) {
+    .cnt h1 {
+        font-size: 30px;
+    }
+
+    .form input {
+        width: 330px;
+        font-size: 19px;
+    }
+
+}
+
+@media only screen and (min-width: 480px) and (max-width:766px) {
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btr {
+        flex: none;
+    }
+
+    .btr a {
+        padding: 21px;
+        float: right;
+    }
+
+    .left_side {
+        width: 100%;
+    }
+
+    .right_side {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btr {
+        flex: none;
+    }
+
+    .btr a {
+        padding: 21px;
+        float: right;
+    }
+
+    .left_side {
+        width: 100%;
+    }
+
+    .right_side {
+        display: none;
+    }
+
+    .cnt h1 {
+        font-size: 30px;
+    }
+
+    .form {
+        width: 90%;
+    }
+
+    .form input {
+        width: 100%;
+        font-size: 20px;
+    }
+
+}
+
+/* preloader */
+.preloader {
+    /*фиксированное позиционирование*/
+    position: fixed;
+    /* координаты положения */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* фоновый цвет элемента */
+    background: #e0e0e0;
+    /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+    z-index: 1001;
+}
+
+.preloader__row {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    background-color: #337ab7;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+    top: auto;
+    bottom: 0;
+    animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes preloader-bounce {
+
+    0%,
+    100% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
+.loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+}
+
+.loaded .preloader {
+    display: none;
+}
